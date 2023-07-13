@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main - main block
+ * main - main bloc
  * Return: 0
  */
 int main(void)
 {	
-	puts("\"Mofokeng is killing it")
+	puts("\"Programming is like building a multilingual puzzle\n")
 	return (0);
 }
