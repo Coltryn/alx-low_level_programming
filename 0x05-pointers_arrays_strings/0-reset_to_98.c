@@ -1,27 +1,11 @@
-#include "coding.h"
+#include "main.h"
 
 /**
- * _strcat - function with two argument
- * @dest: char type pointer 1st argument
- * @src: char type pointer 2nd argument
- *
- * Description: concatenates two strings
- * Return: na
+ * reset_to_98 - updates the value of the variable
+ * the pointer points to to 98
+ * @n: pointer to the variable to update
  */
-char *_strcat(char *dest, char *src)
+void reset_to_98(int *n)
 {
-	char *start = dest;
-
-	while (*dest != '\0')
-	{
-		dest++;
-	}
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (start);
+	*n = 98;
 }
