@@ -1,42 +1,25 @@
-#include "coding.h"
+#include "main.h"
 
 /**
- * cap_string - function with one argument
- * @str: char type pointer
- *
- * Description: capitalizes all words of a string
- * Return: pointer
+ * puts2 - prints one char out of 2 of a string
+ * followed by a new line
+ * @str: string to print the chars from
  */
-char *cap_string(char *str)
+void puts2(char *str)
 {
-	int i;
+	int len, i;
 
-	i = 0;
-	while (str[i] != '\0')
+	len = 0;
+
+	while (str[len] != '\0')
 	{
-		if (str[0] >= 'a' && str[0] <= 'z')
-			str[i] = str[i] - 32;
-		switch (str[i])
-		{
-		case ' ':
-		case '\t':
-		case '\n':
-		case ',':
-		case ';':
-		case '.':
-		case '!':
-		case '?':
-		case '"':
-		case '(':
-		case ')':
-		case '{':
-		case '}':
-			if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-			{
-				str[i + 1] = str[i + 1] - 32;
-			}
-		}
-		i++;
+		len++;
 	}
-	return (str);
+
+	for (i = 0; i < len; i += 2)
+	{
+		_putchar(str[i]);
+	}
+
+	_putchar('\n');
 }

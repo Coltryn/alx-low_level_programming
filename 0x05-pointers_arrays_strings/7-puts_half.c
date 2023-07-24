@@ -1,33 +1,33 @@
-#include "coding.h"
+#include "main.h"
 
 /**
- * leet - function with one argument
- * @str: char type pointer argument
- *
- * Description: encodes a string in 1337
- * Return: value of encoded string
+ * puts_half - prints half of a string
+ * followed by a new line
+ * @str: string to be printed
  */
-char *leet(char *str)
+void puts_half(char *str)
 {
-	char *letters, *replace;
-	int count, count2;
+	int len, n, i;
 
-	letters = "aAeEoOtTlL";
-	replace = "4433007711";
+	len = 0;
 
-	count = 0;
-	while (str[count] != '\0')
+	while (str[len] != '\0')
 	{
-		count2 = 0;
-		while (letters[count2] != '\0')
-		{
-			if (str[count] == letters[count2])
-			{
-				str[count] = replace[count2];
-			}
-			count2++;
-		}
-		count++;
+		len++;
 	}
-	return (str);
+
+	if (len % 2 == 0)
+	{
+		for (i = len / 2; str[i] != '\0'; i++)
+		{
+			_putchar(str[i]);
+		}
+	} else if (len % 2)
+	{
+		for (n = (len - 1) / 2; n < len - 1; n++)
+		{
+			_putchar(str[n + 1]);
+		}
+	}
+	_putchar('\n');
 }

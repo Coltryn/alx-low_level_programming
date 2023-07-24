@@ -1,29 +1,15 @@
-#include "coding.h"
+#include "main.h"
 
 /**
- * _strncat - pointer function with 3 argument
- * @dest: char type pointer 1st argument
- * @src: char type pointer 2nd argument
- * @n: int type 3rd argument
- *
- * Description: concatenates two strings
- * Return: string
+ * swap_int - swaps the values of two integers
+ * @a: pointer to first value
+ * @b: pointer to second value
  */
-char *_strncat(char *dest, char *src, int n)
+void swap_int(int *a, int *b)
 {
-	int i, j;
+	int c;
 
-	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	while (j < n && src[j] != '\0')
-	{
-		dest[i] = src[j];
-		j++;
-		i++;
-	}
-	return (dest);
+	c = *a;
+	*a = *b;
+	*b = c;
 }

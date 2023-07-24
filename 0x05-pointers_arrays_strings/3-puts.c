@@ -1,26 +1,16 @@
-#include "coding.h"
+#include "main.h"
 
 /**
- * _strcmp - function with two argument
- * @s1: pointer char type 1st argument
- * @s2: pointer char type 2nd argument
- *
- * Description: compare two strings
- * Return: 0 for same string, other for not same
+ * _puts - prints a string to stdout
+ * @str: pointer to the string to print
  */
-int _strcmp(char *s1, char *s2)
+void _puts(char *str)
 {
-	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		s1++;
-		s2++;
+		_putchar(str[i]);
 	}
-	if (*s1 == *s2)
-	{
-		return (0);
-	}
-	else
-	{
-		return (*s1 - *s2);
-	}
+	_putchar('\n');
 }
