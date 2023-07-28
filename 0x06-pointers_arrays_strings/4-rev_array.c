@@ -1,22 +1,20 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * reverse_array - prints reverse array.
- * @a: array to be compared.
- * @n: size of array.
- * Return: reversed array.
+ * string_toupper - change all lowercase to uppercase
+ * @n: pointer
+ *
+ * Return: n
  */
-void reverse_array(int *a, int n)
+char *string_toupper(char *n)
 {
-	int swap, begin, end;
+	int i;
 
-	begin = 0;
-	end = n - 1;
-	while (begin < end)
+	i = 0;
+	while (n[i] != '\0')
 	{
-		swap = *(a + begin);
-		*(a + begin) = *(a + end);
-		*(a + end) = swap;
-		begin++;
-		end--;
+		if (n[i] >= 'a' && n[i] <= 'z')
+			n[i] = n[i] - 32;
+		i++;
 	}
+	return (n);
 }
